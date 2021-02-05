@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="CSS\Reset.css" type="text/css">
+    <link rel="stylesheet" href="CSS\Registration.css" type"css/txt">
+  </head>
+  <body>
+      <header>
+        <figure>
+          <a href="index.php"><img class="Logo" src="Resources\Images\LoginLogo.png" alt="Website's logo"></a>
+        </figure>
+      </header>
+      <form method="post" action="Register.php">
+        <label><h1>Register</h1></label>
+        <p class="inputparagraphs">
+          <input type="text" name="Username" placeholder="username" class="placeholder_input" required>
+        </p>
+        <p id="Userid">
+          <input type="text" name="Name" placeholder="name" class="placeholder_input" required>
+          <input id="idspacing" type="text" name="Surname" placeholder="surname" class="placeholder_input" required>
+        </p>
+        <p id="emailp" class="inputparagraphs">
+          <input type="email" name="email" placeholder="email" class="placeholder_input" required>
+        </p>
+        <p class="inputparagraphs">
+          <input type="password" name="password" placeholder="password" class="placeholder_input" required>
+        </p>
+        <p class="inputparagraphs">
+          <input type="password" name="checkpassword" placeholder="repeat password" class="placeholder_input" required>
+        </p>
+        <h1 class="Submitwithstyle">
+            <button type="submit" class="arrow_in_circlebutton"></button>
+        <h1>
+        <h3 id="buttonposition"><a href="Login.html" class="textbutton">I already have an account</a></h3>
+      </form>
+
+      <footer>
+      </footer>
+      <script src="JavaScript\BodyBackgroundLogic.js"></script>
+  </body>
+</html>

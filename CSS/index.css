@@ -1,0 +1,476 @@
+body{
+  background: #2d3436;
+  overflow-x:hidden;
+}
+
+.child1{
+  position:absolute;
+}
+.child2{
+  position:absolute;
+}
+
+.Parent{
+  position:relative;
+  left:50%;
+  width:50%;
+  height:50%;
+}
+
+.LogoBoxSize{
+  width:100px;
+  height:100px;
+}
+
+header{
+  position:relative;
+  left:5%;
+  top:50px;
+}
+
+figure img{
+  position:relative;
+  width:90%;
+  height:300px;
+  z-index:0;
+  overflow:hidden;
+}
+
+
+.ImageButtons{
+  position:absolute;
+  right:0px;
+  background: url("../Resources/Images/ButtonLogin.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  width:100px;
+  height:100px;
+  z-index=100;
+  background-color:white;
+  border-radius: 50%;
+  overflow:hidden;
+}
+
+.IBpos1{
+  position:absolute;
+  float:left;
+  top:100px;
+  z-index:1;
+  transform: scaleX(-1);
+}
+
+.IBpos2{
+  position:absolute;
+  float:right;
+  margin-left:90%;
+  bottom:200px;
+  z-index:1;
+}
+
+#WelcomeBanner{
+  position:relative;
+  overflow:hidden;
+  font-size:200px;
+  color: #ff7675;
+  font-weight: bold;
+  font-family: fantasy;
+  text-align: center;
+  top:100px;
+  text-transform: uppercase;
+  margin-bottom: 150px;
+}
+
+@media only screen and (min-width: 1260px) {
+  .middle1{
+    position: absolute;
+    top:50px;
+    transform: translate(-50%,-50%);
+  }
+
+  .middle2{
+    position: absolute;
+    transform: translate(-50%,-50%);
+  }
+
+}
+
+@media only screen and (min-width:1260px){
+  .WelcomeMessage{
+    border-radius: 20px;
+    line-height: 50px;
+    position:relative;
+    bottom:715px;
+    margin-right:30px;
+    background-color:grey;
+    margin-left:85%;
+
+  }
+
+  .WelcomeMessage h2{
+    text-align:center;
+    color:white;
+    font-family: fantasy;
+    text-transform:uppercase;
+  }
+
+}
+
+@media only screen and (max-width:1260px){
+  .WelcomeMessage{
+    visibility: hidden;
+  }
+}
+
+/*Logo*/
+.HomeLogo:hover{
+  transform: scale(1.3);
+}
+
+.HomeLogo{
+  align-items : center;
+  justify-content: center;
+  border-radius: 50%;
+  top:33px;
+  right:450px;
+  width:90px;
+  height:90px;
+  position:relative;
+  display:inline-flex;
+  overflow:hidden;
+  transition:0.2s all ease;
+}
+
+
+/*Arrow Buttons*/
+
+.Submitwithstyle{
+  width:110px;
+  height:110px;
+}
+
+.arrow_in_circlebutton{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  border:none;
+  background: url("../Resources/Images/ButtonLogin.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+.arrow_in_circlebutton:focus{
+  outline: 0;
+  box-shadow:rgba(0, 0, 0, 0);
+}
+.arrow_in_circlebutton:hover{
+  width:110px;
+  height:110px;
+  transition: width 0.2s,height 0.2s;
+}
+
+.arrow_in_circlebutton:not(:hover){
+  width:100px;
+  height:100px;
+  transition: width 0.2s,height 0.2s;
+}
+
+
+
+/*Drop Down Menu*/
+@media only screen and (min-width: 1260px) {
+.btn{
+  align-items : center;
+  justify-content: center;
+  width:150px;
+  height:40px;
+  position:relative;
+  display:inline-flex;
+  color: white;
+  font-size:14px;
+  font-family:"montserrat";
+  border:2px solid #ff7675;
+  text-transform: uppercase;
+  overflow:hidden;
+  transition:0.85s all ease;
+}
+
+.btn::before{
+  background: #ff7675;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.85s ease;
+}
+
+.btn1::before{
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.btn1:hover::before{
+  height: 380%;
+}
+.drop_down{
+  visibility: hidden;
+}
+}
+
+
+@media only screen and (max-width: 1259px) {
+  .menu{
+    position:relative;
+    bottom:50px;
+    left:300px;
+  }
+  .menu:hover .content a{
+    display:block;
+  }
+  .drop_down{
+    border:2px solid #ff7675;;
+    color:white;
+    background-color: #2d3436;
+    width:150px;
+    height:50px;
+    font-size:18px;
+    text-transform:uppercase;
+    cursor:pointer;
+    margin-left: 50px;
+  }
+  .content{
+    min-width:200px;
+    position:absolute;
+    z-index:2;
+  }
+  .content a{
+    border:2px solid #ff7675;;
+    color:white;
+    background-color: #2d3436;
+    font-size:18px;
+    padding:8px 18px;
+    display:none;
+    z-index:0;
+  }
+
+  .btn{
+    position:relative;
+    display:flex;
+    text-transform: uppercase;
+    overflow:hidden;
+    transition:0.85s all ease;
+  }
+
+  .btn::before{
+    background: #ff7675;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.85s ease;
+  }
+
+  .btn1::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .btn1:hover::before{
+    height: 480%;
+  }
+
+}
+
+
+/*Page Template*/
+.AboutMe{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+
+article{
+  margin:0px auto 100px auto;
+  width:95%;
+  background-color:#a6a6a6;
+  border-radius: 30px;
+}
+
+
+p, li{
+  font-size: 24px;
+  font-family:fantasy;
+}
+
+li{
+  margin-top:10px;
+  margin-left: 30px;
+  list-style: lower-alpha;
+}
+
+
+/*Table for education*/
+td p{
+  text-align: center;
+}
+
+table, td, th{
+  border:2px solid #ff7675;
+}
+
+table{
+  width:95%;
+  margin:100px auto 100px auto;
+}
+
+td,th{
+  padding:10px;
+  color:white;
+  font-family: fantasy;
+  text-transform: uppercase;
+}
+
+th{
+  color:pink;
+}
+
+
+
+
+
+#article10{
+  padding-bottom: 10%;
+}
+#article2{
+  padding-bottom: 2%;
+}
+
+
+
+
+section{
+  margin-bottom:100px;
+  width:100%;
+}
+
+
+
+
+.inside{
+  position:relative;
+  width:95%;
+  top:20px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+
+
+
+
+.Titles h1{
+  position:relative;
+  color:pink;
+  margin-bottom:10px;
+  font-size: 100px;
+  font-family:Impact;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+video{
+  width:95%;
+  height:inherit;
+  position:relative;
+  left:50%;
+  transform:translate(-50%,10%);
+}
+
+
+.columnRight {
+  float:right;
+  width: 50%;
+}
+
+.columnLeft{
+  float:left;
+  width:50%;
+}
+
+.columnLeft img{
+  width:400px;
+  position:relative;
+  left:50%;
+  transform:translate(-50%);
+  border-radius:50%;
+}
+
+.columnRight img{
+  width:400px;
+  position:relative;
+  left:50%;
+  transform:translate(-50%);
+  border-radius:50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+.Banner{
+  margin-top: 100px;
+  font-size: 200px;
+  font-family:Impact;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.Banner h1{
+  color:pink;
+}
+
+
+/*Contacts*/
+address a, p a, li a{
+  color:white;
+}
+
+address a:hover, p a:hover, li a:hover{
+  color:#ff7675;
+}
+
+
+
+
+/*Footer navigation*/
+footer{
+  margin:0px auto 100px auto;
+  width:95%;
+  height: 100px;
+  background-color:#a6a6a6;
+  border-radius: 30px;
+}
+footer p{
+  text-align: center;
+  height:50%;
+  width:100%;
+  transform: translate(0%,75%);
+}
+
+footer p a{
+  padding:4%;
+}
+
+footer p a:hover{
+  padding:4%;
+  color:pink;
+}

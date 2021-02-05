@@ -1,0 +1,193 @@
+/*Page vertiacally size scroller logic*/
+@media only screen and (max-height:600px){
+  body{
+    overflow:scroll;
+  }
+}
+
+
+/*Basic page*/
+body{
+  background:url("../Resources/Images/LoginBackground0.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  transition: background 3s;
+}
+
+form{
+  border-radius:10%;
+  background-color:white;
+  margin:0 auto;
+  width:500px;
+  height:650px;
+  bottom:100px;
+  text-align:center;
+}
+
+input{
+  font-size:24px;
+  width:200px;
+  height:50px;
+  font-family:'FF Mark W05', sans-serif;;
+  font-weight: 700;
+}
+
+input:hover{
+  border-color: Aqua;
+}
+
+input:focus{
+  border-color: Aqua;
+}
+
+.inputparagraphs{
+  width:200px;
+  height:50px;
+  margin:0 auto;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+figure{
+  margin-left:5%;
+  margin-top:5%;
+  width:120px;
+  height:120px;
+}
+
+h1{
+  margin:0 auto;
+  padding-bottom:10px;
+  padding-top:20px;
+  width:100px;
+  font-style: normal;
+  font-size:32px;
+  line-height:110%;
+  font-family:'FF Mark W05', sans-serif;
+  font-weight: 700;
+  letter-spacing:-0.02em;
+}
+#buttonposition{
+  margin-top:-40px;
+}
+#Userid{
+  display:inline-block;
+  width:420px;
+}
+
+#emailp{
+  width:400px;
+  height:50px;
+  margin:0 auto;
+  margin-top:20px;
+}
+
+input[type=email]{
+  width:400px;
+}
+
+
+
+
+/*text inside the  inputs*/
+.textbutton{
+  display:inline-block;
+  margin:0 auto;
+  color:grey;
+  font-size:12px;
+  text-transform: uppercase;
+  margin-top:20px;
+}
+.textbutton:hover{
+  color:black;
+}
+
+
+
+
+.placeholder_input::placeholder{
+  font-family:FF Mark W05;
+  text-transform:uppercase;
+  font-size:12px;
+}
+.placeholder_input::placeholder{
+  display:absolute;
+  margin-left:50px;
+}
+.placeholder_input:focus::placeholder{
+  visibility:hidden;
+}
+
+
+
+/*Submit Button*/
+.Submitwithstyle{
+  width:110px;
+  height:110px;
+}
+
+.arrow_in_circlebutton{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  border:none;
+  background: url("../Resources/Images/ButtonLogin.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+.arrow_in_circlebutton:focus{
+  outline: 0;
+  box-shadow:rgba(0, 0, 0, 0);
+}
+.arrow_in_circlebutton:hover{
+  width:110px;
+  height:110px;
+  transition: width 0.2s,height 0.2s;
+}
+
+.arrow_in_circlebutton:not(:hover){
+  width:100px;
+  height:100px;
+  transition: width 0.2s,height 0.2s;
+}
+
+
+/*Logo Home Button*/
+@media only screen and (max-width: 1299px) and (min-width: 0px) {
+  .Logo{
+    margin-left:2%;
+    margin-top:2%;
+    width:70%;
+    height:70%;
+    border-radius: 50%;
+    transition: 0.2s width, 0.2s height;
+  }
+
+  .Logo:hover{
+    width: 80%;
+    height: 80%;
+    transition: 0.2s width, 0.2s height;
+  }
+}
+
+@media only screen and (max-width:10000px) and (min-width:1300px){
+  .Logo{
+    margin-left:2%;
+    margin-top:2%;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    transition: 0.2s width, 0.2s height;
+  }
+
+  .Logo:hover{
+    width: 110%;
+    height: 110%;
+    transition: 0.2s width, 0.2s height;
+  }
+}

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <?php
+    session_start();
+  ?>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS\Reset.css" type="text/css">
+    <link rel="stylesheet" href="CSS\index.css" type="text/css">
+  </head>
+
+  <body>
+    <nav>
+      <div class="Parent">
+      <div class="child LogoBoxSize">
+          <a href="index.php"><img src="Resources\Images\Logo.png" alt="HomeLogo" class="HomeLogo"></img></a>
+        </div>
+        <div class="child">
+          <div class="menu">
+          <div class="button">
+            <button type="button" class="drop_down" value="Menu">Menu</button>
+          </div>
+          <div class="content">
+          <div class="middle1">
+            <a href="#AboutMe" class="btn btn1">about me</a>
+            <a href="#Skills" class="btn btn1">skills</a>
+            <a href="#Education" class="btn btn1">education</a>
+            <a href="#Experience" class="btn btn1">experience</a>
+          </div>
+          <div class="middle2">
+            <a href="#Contact" class="btn btn1">contact</a>
+            <a href=<?php if(isset($_SESSION['Username'])){echo '"addPost.php"';}else{echo '"Login.html"';} ?>  class="btn btn1">add post</a>
+            <a href="viewBlog.php" class="btn btn1">view blog</a>
+            <a href=<?php if(isset($_SESSION['Username'])){echo '"logout.php"';}else{echo '"Login.html"';} ?> class="btn btn1">
+              <?php
+                  if(isset($_SESSION['Username'])){
+                    echo "LogOut";
+                  }
+                  else{
+                    echo "Login";
+                  }
+              ?>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </nav>
+    <header>
+      <div class="IBpos1">
+        <button class="ImageButtons" type="button" onclick="LeftArrow()"></button>
+      </div>
+      <figure>
+        <img id="HomeImg" src="Resources\Images\LoginBackground4.png"></img>
+        <figcaption><p>Source: <a id="homeRef" href="https://medium.com/@swlkr/what-free-solo-and-clojure-have-in-common-2b82643c8ed6">https://medium.com/@swlkr/what-free-solo-and-clojure-have-in-common-2b82643c8ed6</a></p></figcaption>
+      </figure>
+      <div class="IBpos2">
+        <button class="ImageButtons" type="button" onclick="RightArrow()"></button>
+      </div>
+    </header>
+    <h1 id="WelcomeBanner">About Me</h1>
+    <aside class="WelcomeMessage">
+      <h2>
+        <?php
+        if(isset($_SESSION['Username'])){
+          echo "Welcome ".$_SESSION['Username'];
+        }
+        else{
+          echo "You are not yet logged in";
+        }
+        ?>
+      </h2>
+    </aside>
+
+    <main>
+
+      <div id="AboutMe">
+
+        <div class="Banner">
+          <h1>Dario Russo</h1>
+        </div>
+
+        <div class="AboutMe">
+            <p>My name is Dario Russo and I am from Italy, Sicily.<br>
+              I’ve done lots of things related to my programming passion in my life such as programming videogames or physical models.<br>
+              I have lots of hobbies such as Music, more specifically I play piano, I also play chess and I have a passion over Quantum physics that I dedicate to during my spare time.<br>
+              My best qualities are: Good memory, Problem Solving, Determined, Time management, perseverance.<br>
+              My biggest dream is to build a time machine and I believe that quantum computing will be the key for the realization of my dream.
+            </p>
+        </div>
+
+        <article id="article10">
+          <div class="inside">
+            <div class="Titles">
+              <h1>This is where I am from</h1>
+            </div>
+            <div class="Video">
+              <video controls>
+                <source src="Resources\Video\Sicily.mp4" type="video/mp4">
+                Your browser can't load the video, try using another browser.
+              </video>
+            </div>
+          </div>
+        </article>
+
+        <article id="article2">
+          <div class="inside">
+            <div class="Banner">
+              <h1>Hobbies</h1>
+            </div>
+            <div class="Titles">
+              <h1>VideoGames</h1>
+            </div>
+            <section class="row">
+              <div class="columnLeft">
+                <img src="Resources\Images\LeagueOfLegends.png" alt="League Of Legends Image">
+                <figcaption><p>source: <a href="https://euw.leagueoflegends.com/en-gb/">https://euw.leagueoflegends.com/en-gb/</a></p></figcaption>
+              </div>
+              <div class="columnLeft">
+                <p>I started playing videogames at a young age and I am still playing them.<br>They are a nice way to relax and enjoy time.<br>My favourite game is League Of Legends.</p>
+              </div>
+            </section>
+
+            <section class="row">
+              <div class="Titles">
+                <h1>Chess</h1>
+              </div>
+              <div class="columnRight">
+                <img src="Resources\Images\Chess.png" alt="Chess Image">
+                <figcaption><p>source: <a href="https://www.wallpaperflare.com/no-game-no-life-anime-chess-wallpaper-cjshd">https://www.wallpaperflare.com/no-game-no-life-anime-chess-wallpaper-cjshd</a></p></figcaption>
+              </div>
+              <div class="columnRight">
+                <p>I started playing chess in elementary school.<br> In my opinion, it is one of the best games ever created,mostly because I love strategic thinking<br>I love to find strategies and to predict my opponent's moves. <br>Despite me not being that good at playing chess I have not given up yet and still practicing to get better. </p>
+              </div>
+            </section>
+
+            <section class="row">
+              <div class="Titles">
+                <h1>Cardistry</h1>
+              </div>
+              <div class="columnLeft">
+                <img src="Resources\Images\Cards.png" alt="Cards Fan Image">
+                <figcaption><p>source: <a href="https://www.thevirts.com/fw17/">https://www.thevirts.com/fw17/</a></p></figcaption>
+              </div>
+              <div class="columnLeft">
+                <p>I started as a magician, but then I had no one to show my magic tricks to, I stopped doing magic and tried cardistry instead, I am not that good at it but people still look at me with surprised faces when I perform it.
+this hobby taught me how to be resilient, gave me good hand practice, and showed me that a simple solution is not always bad.</p>
+              </div>
+            </section>
+            <section class="row">
+              <div class="Titles">
+                <h1>Anime</h1>
+              </div>
+              <div class="columnRight">
+                <img src="Resources\Images\Anime.png" alt="Anime Photo Collage Picture">
+                <figcaption><p>source: <a href="https://animeforums.net/gallery/image/3431-favorit-animes-nostalgia/">https://animeforums.net/gallery/image/3431-favorit-animes-nostalgia/</a></p></figcaption>
+              </div>
+              <div class="columnRight">
+                <p>My best source of entertainment, I love anime; my favourites are:</p>
+                <ul>
+                  <li>No game No life</li>
+                  <li>Steins;Gate</li>
+                  <li>Violet Evergarden</li>
+                  <li>Shigatsu wa kimi no uso</li>
+                  <li>Code Geass</li>
+                </ul>
+                <p>This taught me to be creative</p>
+              </div>
+            </section>
+            <section class="row">
+              <div class="Titles">
+                <h1>Piano</h1>
+              </div>
+              <div class="columnLeft">
+                <img src="Resources\Images\Piano.png" alt="Tree, Pianist And Violinist Silhouette In A Sea Background">
+                <figcaption><p>source: <a href="https://www.pinterest.co.uk/pin/344525440231463679/">https://www.pinterest.co.uk/pin/344525440231463679/</a></p></figcaption>
+              </div>
+              <div class="columnLeft">
+                <p>I started playing piano at 11 years old. I started as a classical musician.When I finished my 3 years of piano studies I started playing whatever I like.<br>Now that I look back on my studies I think that I needed to be more disciplined in order to maintain a good standard of playing.</p>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+
+      <div id="Skills">
+        <h1 id="WelcomeBanner">Skills</h1>
+
+        <div class="Banner">
+          <h1>My Top Skills Are:</h1>
+        </div>
+
+        <article id="article2">
+          <div class="inside">
+              <section class="row">
+                <div class="Titles">
+                  <h1>First: Problem Solving</h1>
+                </div>
+                <aside class="columnLeft">
+                  <img src="Resources\Images\ProblemSolving.png" alt="Problem Solving Image">
+                  <figcaption><p>source: <a href="https://theleadershipnetwork.com/article/the-secret-problem-solving-weapon-of-lean-organisations-and-why-it-s-unbelievably-effective-1">https://theleadershipnetwork.com/article/the-secret-problem-solving-weapon-of-lean-organisations-and-why-it-s-unbelievably-effective-1</a></p></figcaption>
+                </aside>
+                <div class="columnLeft">
+                  <p>I love solving problems, from rubiks cube to problem solving books to programming.It is one of my favourite skills to train. Training this skill gave me a better approach to any type of logic problems.</p>
+                </div>
+              </section>
+          </div>
+        </article>
+
+
+        <article id="article2" class="row">
+          <div class="inside">
+            <div class="Titles">
+                <h1>Second: Resiliet</h1>
+            </div>
+            <section class="row">
+              <aside class="columnRight">
+                <img src="Resources\Images\Resilient.png" alt="Resilient Image">
+                  <figcaption><p>source: <a href="https://digest.bps.org.uk/2018/09/25/the-in-vogue-psychological-construct-grit-is-an-example-of-redundant-labelling-in-personality-psychology-claims-new-paper/">https://digest.bps.org.uk/2018/09/25/the-in-vogue-psychological-construct-grit-is-an-example-of-redundant-labelling-in-personality-psychology-claims-new-paper/</a></p></figcaption>
+              </aside>
+              <div class="columnRight">
+                <p>I know that whenever I try something I don't surrender,I have applied this to many assignments I have completed in the past, and I know that I need to teach my self when to stop if when the game is't worth it anymore.</p>
+              </div>
+            </section>
+          </div>
+        </article>
+
+
+        <article id="article2" class="row">
+          <div class="inside">
+            <div class="Titles">
+              <h1>Third: Programming</h1>
+            </div>
+            <section class="row">
+              <aside class="columnLeft">
+                <img src="Resources\Images\Programming.png" alt="HTML Code Image">
+                <figcaption><p>source: <a href="https://www.needpix.com/photo/485214/programming-html-code-coding-website-development-website-programming-code-web-development-internet">https://www.needpix.com/photo/485214/programming-html-code-coding-website-development-website-programming-code-web-development-internet</a></p></figcaption>
+              </aside>
+              <div class="columnLeft">
+                <p>Programming is both a skill and an hobbies of mine. I always loved programming. However I believe programming is more of an applied skill rather than a passtime. In my opinion it is just an instrument used to help those who uses it to achieve their goals. Coding is used to make solution to everyday problem but with no problem it won't achieve anything.</p>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+
+      <div id="Education">
+        <h1 id="WelcomeBanner">Education</h1>
+        <table>
+          <caption><h1></h1></caption>
+          <tr>
+            <th>School/University</th>
+            <th>Date</th>
+            <th>Certificate Type</th>
+            <th>Subject</th>
+            <th>Grade</th>
+          </tr>
+
+          <tr>
+              <td>Federico Secondo di Svevia</td>
+              <td>2014</td>
+              <td>Certificato di 3 media</td>
+              <td>N/A</td>
+              <td>8/10</td>
+          </tr>
+
+          <tr>
+            <td rowspan="11">Kenton High School</td>
+            <td>2017</td>
+            <td>BTEC</td>
+            <td>Business</td>
+            <td>M2</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>BTEC</td>
+            <td>Engineering</td>
+            <td>*2</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>GCSE</td>
+            <td>Mathematics tier H</td>
+            <td>8</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>GCSE</td>
+            <td>English Literature</td>
+            <td>4</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>GCSE</td>
+            <td>Music</td>
+            <td>B</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>GCSE</td>
+            <td>Religious Study B</td>
+            <td>B</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>GCSE</td>
+            <td>Science A(Route 1)</td>
+            <td>B</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>GCSE</td>
+            <td>Additional Science(Route 1)</td>
+            <td>A</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>GCSE</td>
+            <td>History A</td>
+            <td>B</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>GCSE</td>
+            <td>Computing</td>
+            <td>A</td>
+          </tr>
+
+          <tr>
+            <td>2017</td>
+            <td>GCSE</td>
+            <td>Italian</td>
+            <td>A*</td>
+          </tr>
+
+          <tr>
+            <td rowspan="5">Glenthorne Hight School</td>
+            <td>2019</td>
+            <td>A-Levels</td>
+            <td>Mathematics</td>
+            <td>A</td>
+          </tr>
+
+          <tr>
+            <td>2019</td>
+            <td>A-Levels</td>
+            <td>Further-Mathematics</td>
+            <td>C</td>
+          </tr>
+
+          <tr>
+            <td>2019</td>
+            <td>A-Levels</td>
+            <td>Physics</td>
+            <td>B</td>
+          </tr>
+
+          <tr>
+            <td>2019</td>
+            <td>A-Levels</td>
+            <td>Computer Science</td>
+            <td>B</td>
+          </tr>
+
+          <tr>
+            <td>2018</td>
+            <td>GCSE</td>
+            <td>English Language</td>
+            <td>4</td>
+          </tr>
+
+          <tr>
+            <td>Queen Mary University Of London</td>
+            <td>2023</td>
+            <td>BSc (Hons)</td>
+            <td>Computer Science</td>
+            <td>N/A</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="Experience">
+        <h1 id="WelcomeBanner">Experience</h1>
+
+        <div class="AboutMe">
+            <p>Personally I don't have any previous work experiences, however I have completed a number of projects over the years that I will talk about below.</p>
+        </div>
+        <article id="article2">
+          <div class="inside">
+              <section class="row">
+                <div class="Titles">
+                  <h1>The prince and the princess</h1>
+                </div>
+                <aside class="columnLeft">
+                  <img src="Resources\Images\Princess.png" alt="Problem Solving Image">
+                  <figcaption><p>Source: <a href="https://it.freepik.com/vettori-gratuito/principessa-disegnata-a-mano-con-abito-rosa_4419900.htm#page=1&query=principessa&position=13">https://it.freepik.com/vettori-gratuito/principessa-disegnata-a-mano-con-abito-rosa_4419900.htm#page=1&query=principessa&position=13</a></p></figcaption>
+                </aside>
+                <div class="columnLeft">
+                  <p>This is a mathematical problem that states:</p>
+                  <p>On the top floor of a castle lives a princess. The floor has n bedrooms arranged in a row. Each bedroom has doors connecting to the adjoining bedrooms as well as to the outside corridor. The princess sleeps in a different bedroom each night by opening the door to an adjoining bedroom and spending the night and the next day in that room.
+                     One day a prince arrives at the castle and is desirous of marrying the princess. The guardian angel at the castle tells him of the princess' sleeping patterns and informs him that each morning he may knock on one of the outside doors. If the princess happens to be behind that door, she will open it and consent to marry him. What is the best strategy for the prince to follow?</p>
+                  <p>The problem it self is easy to understand, however it is really hard to figure the best strategy that the prince can use.</p>
+                  <p>I decided that I would need some sample data, and because of that I decided to create a program that simulates the action of the prince and princess in order for me to understand what it is going on in a better way, the simulation data woud have been stored in an excel file where I later could have analysed the data.</p>
+                  <br>
+                  <p>Below is the code I used and the excel sample with 4 doors.</p>
+                  <ul>
+                    <li><a href="Resources\Code\dataWith4Doors.csv">Excel File (Click to download)</a></li>
+                    <li><a href="Resources\Code\princeSearchForPrincess.py">Code in python (Click to download)</a></li>
+                  </ul>
+                  <br>
+                  <p>I will leave you the joy of finding the solution for each number of doors.</p>
+                  <p>NB: there is no general solution, each number of door has a unique solution.</p>
+                </div>
+              </section>
+          </div>
+        </article>
+
+
+        <article id="article2" class="row">
+          <div class="inside">
+            <div class="Titles">
+                <h1>My first Videogame</h1>
+            </div>
+            <section class="row">
+              <aside class="columnRight">
+                <img src="Resources\Images\Resilient.png" alt="Resilient Image">
+                <figcaption><p>Source: <a href="https://digest.bps.org.uk/2018/09/25/the-in-vogue-psychological-construct-grit-is-an-example-of-redundant-labelling-in-personality-psychology-claims-new-paper/">https://digest.bps.org.uk/2018/09/25/the-in-vogue-psychological-construct-grit-is-an-example-of-redundant-labelling-in-personality-psychology-claims-new-paper/</a></p></figcaption>
+              </aside>
+              <div class="columnRight">
+                <p>
+                  My first videogame is a project I submitted as my A-level computer science coursework.
+                  This project was beyond my programming skills; however, as I love challenges, I decided that I would have created it nevertheless.
+                  I went over so many challenges with my code, and I had little to no help, as not even my teacher could aid me.
+                  I started the project by watching tons of tutorials, and by the end, my programming knowledge and skills were beyond the required skills set for A-levels.
+                  The game, based on times tables, was intended for kids that struggle to understand them. The game also has a tool for teachers, which allows for kids' progress to be checked on.
+                  I wrote this code in python with the use of a library called <a href="https://www.pygame.org/news">pygame</a>.<br>
+                  The project is below as a downloadable link, have fun playing it.<br>
+                  <a href="Resources\Code\A-levelProject.zip">Download The Code Here</a>
+
+                </p>
+              </div>
+            </section>
+          </div>
+        </article>
+
+      <div id="Contact">
+        <h1 id="WelcomeBanner">Contact Information</h1>
+        <div class="About Me">
+          <article id="article2">
+
+            <address class="inside">
+              <p>Telephone: <a href="tel:07305355051">07305355051</a></p>
+              <p>Email: <a href="mailto:dario.russo.052001@gmail.com">dario.russo.052001@gmail.com</a></p>
+              <p>Linkedin: <a href="https://www.linkedin.com/in/dariorusso052001"> Dario Russo</a></p>
+            </address>
+          </article>
+
+        </div>
+      </div>
+    </main>
+
+
+    <footer>
+      <p> <a href="#">Back To Top</a> <a href="#AboutMe">About Me</a> <a href="#Skills">Skills</a> <a href="#Education">Education</a> <a href="#Experience">Experience</a></p>
+    </footer>
+
+  <script src="JavaScript\Home.js"></script>
+</body>
+</html>
